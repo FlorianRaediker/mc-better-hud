@@ -5,4 +5,5 @@
 # @within function bingo:init/setup_lobby
 
 execute in bingo:lobby run forceload remove all
+# IMPORTANT!
 execute in bingo:lobby run forceload add 0 0

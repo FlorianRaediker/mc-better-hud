@@ -5,7 +5,7 @@
 #
 # @within function bingo:tick/tick
 
-execute as @a[predicate=bingo:is_in_lobby] run function bingo:lobby/player_tick
+execute as @a run function bingo:lobby/player_tick
 
 #change settings
 #execute as @a[scores={bingo.settings=5..12}] run function bingo:lobby/player_settings/save/do_action

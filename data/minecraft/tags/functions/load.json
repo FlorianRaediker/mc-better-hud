@@ -2,6 +2,7 @@
 	"values": [
 		"neun_einser.math:init/init",
 		"neun_einser.timer:internal/init",
-		"bingo:init/init"
+		"bingo:init/init",
+		"hud:init"
 	]
 }
