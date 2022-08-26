@@ -2,8 +2,7 @@
 #
 # This function spawns lobby chests and minimizes forceloading.
 #
-# @within function bingo:init/setup_lobby
+## @within function bingo:init/setup_lobby
 
 execute in bingo:lobby run forceload remove all
-# IMPORTANT!
 execute in bingo:lobby run forceload add 0 0

@@ -1,1 +1,0 @@
-execute in bingo:lobby run forceload add 0 0

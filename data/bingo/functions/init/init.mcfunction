@@ -59,7 +59,7 @@ forceload add 0 0
 	# 	automatically, after #bingo:post_register_items ran.
 	#
 	# @api
-	#declare storage bingo:items
+#	#declare storage bingo:items
 
 	#>
 	# This is the registry used to register things to Minecraft Bingo.
@@ -100,14 +100,14 @@ forceload add 0 0
 	# vanilla Minecraft: Bingo game to add more default configurations.
 	#
 	# @public
-	#declare storage bingo:player
+#	#declare storage bingo:player
 
 	#>
 	# This storage holds the current Bingo card. It contains information about the
 	# currently generated card and about all playing teams' progress.
 	#
 	# @internal
-	#declare storage bingo:card
+#	#declare storage bingo:card
 #endregion
 
 #region tag declarations
@@ -120,44 +120,44 @@ forceload add 0 0
 	# This tag is used for players who enable manual gamemode switching.
 	#
 	# @internal
-	#declare tag bingo.enable_manual_gamemode_switch
+#	#declare tag bingo.enable_manual_gamemode_switch
 	#>
 	# This tag is used to tag the item frames that display the big preview card in
 	# the lobby
 	#
 	# @internal
-	#declare tag bingo.card_frame
+#	#declare tag bingo.card_frame
 	#>
 	# This tag is used during item removal after successfully obtaining an item from
 	# the card.
 	#
 	# @internal
-	#declare tag bingo.clear
+#	#declare tag bingo.clear
 	#>
 	# This tag is used for the area effect cloud marking the location for the skybox
 	#
 	# @internal
-	#declare tag bingo.skybox_cloud
+#	#declare tag bingo.skybox_cloud
 	#>
 	# This tag is given to any player who triggered bingo.spectator in game.
 	#
 	# @internal
-	#declare tag bingo.spectator
+#	#declare tag bingo.spectator
 	#>
 	# This tag marks an AEC which may be used for testing wether a string is
 	# within a certain set.
 	#
 	# @internal
-	#declare tag bingo.string_tester
-	kill @e[type=minecraft:area_effect_cloud, tag=bingo.string_tester]
-	summon minecraft:area_effect_cloud 0 0 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["bingo.string_tester"]}
+#	#declare tag bingo.string_tester
+#	kill @e[type=minecraft:area_effect_cloud, tag=bingo.string_tester]
+#	summon minecraft:area_effect_cloud 0 0 0 {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["bingo.string_tester"]}
 	#>
 	# Tag for entities that where already persistent.
 	#
 	# @within
 	# 	function bingo:game/start/pre_gen/handle_entities
 	# 	function bingo:game/start/unfreeze_entities
-	#declare tag bingo.persistance_required
+	###declare tag bingo.persistance_required
 	#>
 	# This tag is given to players who are currently verifying their resource pack
 	#
@@ -170,175 +170,175 @@ forceload add 0 0
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot0
+	#	#declare tag bingo.has_slot0
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 1.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot1
+	#	#declare tag bingo.has_slot1
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 2.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot2
+	#	#declare tag bingo.has_slot2
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 3.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot3
+	#	#declare tag bingo.has_slot3
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 4.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot4
+	#	#declare tag bingo.has_slot4
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 5.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot5
+	#	#declare tag bingo.has_slot5
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 6.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot6
+	#	#declare tag bingo.has_slot6
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 7.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot7
+	#	#declare tag bingo.has_slot7
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 8.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot8
+	#	#declare tag bingo.has_slot8
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 9.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot9
+	#	#declare tag bingo.has_slot9
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 10.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot10
+	#	#declare tag bingo.has_slot10
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 11.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot11
+	#	#declare tag bingo.has_slot11
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 12.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot12
+	#	#declare tag bingo.has_slot12
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 13.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot13
+	#	#declare tag bingo.has_slot13
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 14.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot14
+	#	#declare tag bingo.has_slot14
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 15.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot15
+	#	#declare tag bingo.has_slot15
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 16.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot16
+	#	#declare tag bingo.has_slot16
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 17.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot17
+	#	#declare tag bingo.has_slot17
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 18.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot18
+	#	#declare tag bingo.has_slot18
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 19.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot19
+	#	#declare tag bingo.has_slot19
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 20.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot20
+	#	#declare tag bingo.has_slot20
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 21.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot21
+	#	#declare tag bingo.has_slot21
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 22.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot22
+	#	#declare tag bingo.has_slot22
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 23.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot23
+	#	#declare tag bingo.has_slot23
 		#>
 		# This tag marks a player who is in a team that obtained the item in slot 24.
 		#
 		# @within
 		# 	function bingo:game/start/spawn_players
 		# 	structure bingo:machinery
-		#declare tag bingo.has_slot24
+	#	#declare tag bingo.has_slot24
 	#endregion
 
 	#region lobby signs
@@ -347,7 +347,7 @@ forceload add 0 0
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	function bingo:init/setup_lobby
-			#declare tag bingo.sign_machinery
+		#	#declare tag bingo.sign_machinery
 		#endregion
 
 		#region credits
@@ -355,159 +355,159 @@ forceload add 0 0
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_neun_einser
+		#	#declare tag bingo.sign_credits_neun_einser
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_unlucks_mc_gee
+		#	#declare tag bingo.sign_credits_unlucks_mc_gee
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_kristof
+		#	#declare tag bingo.sign_credits_kristof
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_amber_wat
+		#	#declare tag bingo.sign_credits_amber_wat
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_nope_name
+		#	#declare tag bingo.sign_credits_nope_name
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_dr_brian_lorgon111
+		#	#declare tag bingo.sign_credits_dr_brian_lorgon111
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_community_and_support
+		#	#declare tag bingo.sign_credits_community_and_support
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_playtesters
+		#	#declare tag bingo.sign_credits_playtesters
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_silentrob
+		#	#declare tag bingo.sign_credits_silentrob
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_muffinshire
+		#	#declare tag bingo.sign_credits_muffinshire
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_gothfaerie
+		#	#declare tag bingo.sign_credits_gothfaerie
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_zampone
+		#	#declare tag bingo.sign_credits_zampone
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_thomas_to_space
+		#	#declare tag bingo.sign_credits_thomas_to_space
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_craca_croes_gazyy
+		#	#declare tag bingo.sign_credits_craca_croes_gazyy
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_lifeofchrome
+		#	#declare tag bingo.sign_credits_lifeofchrome
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_tod_nl
+		#	#declare tag bingo.sign_credits_tod_nl
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_no_leaf_clover
+		#	#declare tag bingo.sign_credits_no_leaf_clover
 
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_translators
+		#	#declare tag bingo.sign_credits_translators
 
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_german
+		#	#declare tag bingo.sign_credits_german
 
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_polish
+		#	#declare tag bingo.sign_credits_polish
 
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_italian
+		#	#declare tag bingo.sign_credits_italian
 
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_dutch
+		#	#declare tag bingo.sign_credits_dutch
 
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_russian
+		#	#declare tag bingo.sign_credits_russian
 
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_tools
+		#	#declare tag bingo.sign_credits_tools
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_tools_vscode
+		#	#declare tag bingo.sign_credits_tools_vscode
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_tools_datapackhelperplus
+		#	#declare tag bingo.sign_credits_tools_datapackhelperplus
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_tools_multinoise
+		#	#declare tag bingo.sign_credits_tools_multinoise
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_tools_nbtexplorer
+		#	#declare tag bingo.sign_credits_tools_nbtexplorer
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_tools_nbtstudio
+		#	#declare tag bingo.sign_credits_tools_nbtstudio
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:credits
-			#declare tag bingo.sign_credits_tools_nbtviewer
+		#	#declare tag bingo.sign_credits_tools_nbtviewer
 		#endregion
 
 		#region card generation
@@ -515,32 +515,32 @@ forceload add 0 0
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:card_generation
-			#declare tag bingo.sign_team_selection
+		#	#declare tag bingo.sign_team_selection
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:card_generation
-			#declare tag bingo.sign_card_generation_crafting_table
+		#	#declare tag bingo.sign_card_generation_crafting_table
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:card_generation
-			#declare tag bingo.sign_card_generation_furnace
+		#	#declare tag bingo.sign_card_generation_furnace
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:card_generation
-			#declare tag bingo.sign_card_generation_random_card
+		#	#declare tag bingo.sign_card_generation_random_card
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:card_generation
-			#declare tag bingo.sign_card_generation_from_seed
+		#	#declare tag bingo.sign_card_generation_from_seed
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:card_generation
-			#declare tag bingo.sign_card_generation_start_game
+		#	#declare tag bingo.sign_card_generation_start_game
 		#endregion
 
 		#region tutorial & settings
@@ -548,92 +548,92 @@ forceload add 0 0
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_settings_more_coming
+		#	#declare tag bingo.sign_settings_more_coming
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_settings_automatic_pregen
+		#	#declare tag bingo.sign_settings_automatic_pregen
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_settings_strict_mode
+		#	#declare tag bingo.sign_settings_strict_mode
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_settings_preferences
+		#	#declare tag bingo.sign_settings_preferences
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_generate_chests
+		#	#declare tag bingo.sign_tutorial_generate_chests
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_generate_chests
+		#	#declare tag bingo.sign_tutorial_generate_chests
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_basics
+		#	#declare tag bingo.sign_tutorial_basics
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_basics1
+		#	#declare tag bingo.sign_tutorial_basics1
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_basics2
+		#	#declare tag bingo.sign_tutorial_basics2
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_basics3
+		#	#declare tag bingo.sign_tutorial_basics3
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_basics4
+		#	#declare tag bingo.sign_tutorial_basics4
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_basics5
+		#	#declare tag bingo.sign_tutorial_basics5
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_basics6
+		#	#declare tag bingo.sign_tutorial_basics6
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_skybox
+		#	#declare tag bingo.sign_tutorial_skybox
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_get_tools
+		#	#declare tag bingo.sign_tutorial_get_tools
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_game_info
+		#	#declare tag bingo.sign_tutorial_game_info
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_goal_lectern
+		#	#declare tag bingo.sign_tutorial_goal_lectern
 			#>
 			# @within
 			# 	function bingo:lobby/place_sign
 			# 	structure bingo:tutorial
-			#declare tag bingo.sign_tutorial_game_info_lectern
+		#	#declare tag bingo.sign_tutorial_game_info_lectern
 		#endregion
 	#endregion
 
@@ -642,81 +642,81 @@ forceload add 0 0
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.lobby_button
+	#	#declare tag bingo.lobby_button
 		#>
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.button_red
+	#	#declare tag bingo.button_red
 		#>
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.button_orange
+	#	#declare tag bingo.button_orange
 		#>
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.button_yellow
+	#	#declare tag bingo.button_yellow
 		#>
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.button_lime
+	#	#declare tag bingo.button_lime
 		#>
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.button_green
+	#	#declare tag bingo.button_green
 		#>
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.button_cyan
+	#	#declare tag bingo.button_cyan
 		#>
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.button_light_blue
+	#	#declare tag bingo.button_light_blue
 		#>
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.button_blue
+	#	#declare tag bingo.button_blue
 		#>
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.button_purple
+	#	#declare tag bingo.button_purple
 		#>
 		# @within
 		# 	function bingo:lobby/place_indestructible_blocks
 		# 	structure bingo:card_generation
-		#declare tag bingo.button_magenta
+	#	#declare tag bingo.button_magenta
 	#endregion
 #endregion
 
 #>
 # @private
-#declare tag bingo.detect_mp_aec
-kill @e[type=minecraft:area_effect_cloud, tag=bingo.detect_mp_aec, limit=1]
-summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.technical.detect_multiplayer"}', Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["bingo.detect_mp_aec"]}
+##declare tag bingo.detect_mp_aec
+#kill @e[type=minecraft:area_effect_cloud, tag=bingo.detect_mp_aec, limit=1]
+#summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.technical.detect_multiplayer"}', Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: ["bingo.detect_mp_aec"]}
 
 #region setup objectives
-	scoreboard objectives remove bingo.chicken
+#	scoreboard objectives remove bingo.chicken
 	scoreboard objectives remove bingo.const
-	scoreboard objectives remove bingo.fireworks
-	scoreboard objectives remove bingo.has_item
+#	scoreboard objectives remove bingo.fireworks
+#	scoreboard objectives remove bingo.has_item
 	scoreboard objectives remove bingo.hud_update
 	scoreboard objectives remove bingo.io
-	scoreboard objectives remove bingo.lobby
-	scoreboard objectives remove bingo.menu
+#	scoreboard objectives remove bingo.lobby
+#	scoreboard objectives remove bingo.menu
 	scoreboard objectives remove bingo.menu_page
 	scoreboard objectives remove bingo.pos_hash
 	scoreboard objectives remove bingo.pref
-	scoreboard objectives remove bingo.prev_y_pos
-	scoreboard objectives remove bingo.seed
-	scoreboard objectives remove bingo.spectator
+#	scoreboard objectives remove bingo.prev_y_pos
+#	scoreboard objectives remove bingo.seed
+#	scoreboard objectives remove bingo.spectator
 	scoreboard objectives remove bingo.resources
 	scoreboard objectives remove bingo.tmp
 
@@ -754,7 +754,7 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# operators even when they are offline.
 		#
 		# @public
-		scoreboard objectives add bingo.operator dummy
+	#	scoreboard objectives add bingo.operator dummy
 
 		#>
 		# Whether this player's hud needs to be forcefully updated entirely
@@ -771,14 +771,14 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		#
 		# @internal
 		# @user
-		scoreboard objectives add bingo.lobby trigger
+	#	scoreboard objectives add bingo.lobby trigger
 
 		#>
 		# Trigger objective for displaying the bingo menu during a game.
 		#
 		# @internal
 		# @user
-		scoreboard objectives add bingo.menu trigger
+	#	scoreboard objectives add bingo.menu trigger
 
 		#>
 		# Trigger objective used to handle changes / clicks in the preferences menu.
@@ -790,7 +790,7 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# Trigger objective used to switch to spectator mode while in game.
 		#
 		# @internal
-		scoreboard objectives add bingo.spectator trigger
+	#	scoreboard objectives add bingo.spectator trigger
 
 		#>
 		# Trigger objective used in the player configuration dialogs.
@@ -809,7 +809,7 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		#
 		# @internal
 		# @user
-		scoreboard objectives add bingo.seed trigger
+	#	scoreboard objectives add bingo.seed trigger
 
 		#>
 		# Trigger objective used to load certain setting pages.
@@ -824,19 +824,19 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# Used to store chicken egg timers during pre-gen
 		#
 		# @internal
-		scoreboard objectives add bingo.chicken dummy
+	#	scoreboard objectives add bingo.chicken dummy
 		#>
 		# This objective holds the position preference of where a player's card should
 		# be displayed.
 		#
 		# @internal
-		scoreboard objectives add bingo.card_pos dummy
+	#	scoreboard objectives add bingo.card_pos dummy
 
 		#>
 		# This objective contains the index for the completed goal effect per player
 		#
 		# @internal
-		scoreboard objectives add bingo.fireworks dummy
+	#	scoreboard objectives add bingo.fireworks dummy
 
 		#>
 		# This objective contains unique IDs for the item frames in the lobby.
@@ -845,20 +845,20 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# in card_generation.
 		#
 		# @internal
-		scoreboard objectives add bingo.frame_id dummy
+	#	scoreboard objectives add bingo.frame_id dummy
 
 		#>
 		# This objective is used to keep track of the current game id. Players who
 		# joined during a different game are teleported back to the lobby.
 		#
 		# @internal
-		scoreboard objectives add bingo.game_id dummy
+	#	scoreboard objectives add bingo.game_id dummy
 		#>
 		# The current game id
 		#
 		# @internal
-		#declare score_holder $current_game_id
-		scoreboard players add $current_game_id bingo.game_id 0
+	#	#declare score_holder $current_game_id
+	#	scoreboard players add $current_game_id bingo.game_id 0
 
 		#>
 		# This objective is used for item detection to store whether the detect command
@@ -868,7 +868,7 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# used here.
 		#
 		# @internal
-		scoreboard objectives add bingo.has_item dummy
+	#	scoreboard objectives add bingo.has_item dummy
 
 		#>
 		# This objective contains unique player IDs, used to identify player-specific
@@ -894,13 +894,13 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# This objective contains the y coordinate of entities in the previous tick
 		#
 		# @internal
-		scoreboard objectives add bingo.prev_y_pos dummy
+	#	scoreboard objectives add bingo.prev_y_pos dummy
 
 		#>
 		# This objective is used to store information for scheduled events
 		#
 		# @internal
-		scoreboard objectives add bingo.schedule dummy
+	#	scoreboard objectives add bingo.schedule dummy
 
 		#>
 		# This objective is used for temporary calculations.
@@ -944,10 +944,10 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# Whether command blocks are enabled
 		#
 		# @internal
-		#declare score_holder $commandblocks_enabled
-		scoreboard players set $commandblocks_enabled bingo.state 0
-		setblock 0 4 0 minecraft:air
-		setblock 0 4 0 minecraft:command_block{auto: true, Command: "scoreboard players set $commandblocks_enabled bingo.state 1"}
+	#	#declare score_holder $commandblocks_enabled
+	#	scoreboard players set $commandblocks_enabled bingo.state 0
+	#	setblock 0 4 0 minecraft:air
+	#	setblock 0 4 0 minecraft:command_block{auto: true, Command: "scoreboard players set $commandblocks_enabled bingo.state 1"}
 
 		#>
 		# The current game state
@@ -957,8 +957,8 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# 3 = Game started
 		#
 		# @public
-		#declare score_holder $game_state
-		scoreboard players add $game_state bingo.state 0
+	#	#declare score_holder $game_state
+	#	scoreboard players add $game_state bingo.state 0
 		#>
 		# Whether this is multiplayer
 		#
@@ -972,8 +972,8 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# 2 = completed
 		#
 		# @public
-		#declare score_holder $pregen_status
-		scoreboard players add $pregen_status bingo.state 0
+	#	#declare score_holder $pregen_status
+	#	scoreboard players add $pregen_status bingo.state 0
 		#>
 		# Whether the lobby is already generated.
 		#
@@ -981,31 +981,31 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# the future though.
 		#
 		# @public
-		#declare score_holder $lobby_generated
-		scoreboard players add $lobby_generated bingo.state 0
+	#	#declare score_holder $lobby_generated
+	#	scoreboard players add $lobby_generated bingo.state 0
 		#>
 		# The x location of spawn. Is initialized when players are teleported.
 		#
 		# @public
-		#declare score_holder $spawn_x
+	#	#declare score_holder $spawn_x
 		#>
 		# The z location of spawn. Is initialized when players are teleported.
 		#
 		# @public
-		#declare score_holder $spawn_z
+	#	#declare score_holder $spawn_z
 
 		#>
 		# Whether pregen should automatically start after generating a new card.
 		#
 		# @internal
-		#declare score_holder $automatically_pregen
-		scoreboard players add $automatically_pregen bingo.settings 0
+	#	#declare score_holder $automatically_pregen
+	#	scoreboard players add $automatically_pregen bingo.settings 0
 		#>
 		# Whether strict mode is turned on
 		#
 		# @internal
-		#declare score_holder $strict_mode
-		scoreboard players add $strict_mode bingo.settings 0
+	#	#declare score_holder $strict_mode
+	#	scoreboard players add $strict_mode bingo.settings 0
 
 		#>
 		# The current game seed
@@ -1013,14 +1013,14 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# Stored in bingo.state
 		#
 		# @internal
-		#declare score_holder $seed
+	#	#declare score_holder $seed
 		#>
 		# The current total item weight
 		#
 		# Stored in bingo.state
 		#
 		# @internal
-		#declare score_holder $total_item_weight
+	#	#declare score_holder $total_item_weight
 		#>
 		# The weight that is available per category to be split over all items belonging
 		# to that category.
@@ -1033,7 +1033,7 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# Stored in bingo.state
 		#
 		# @internal
-		#declare score_holder $available_category_weight
+	#	#declare score_holder $available_category_weight
 		#>
 		# Time from last tick
 		#
@@ -1044,7 +1044,7 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 		# Whether the card needs to be updated
 		#
 		# @internal
-		#declare score_holder $update_card
+	#	#declare score_holder $update_card
 		#>
 		# @public
 		#declare score_holder -2
@@ -1130,21 +1130,21 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 
 # Create overworld resourcepack check
 	fill 0 0 0 2 3 2 minecraft:black_concrete outline
-	gamerule spawnRadius 0
+#	gamerule spawnRadius 0
 
 # Add pregen bossbar
-	bossbar add bingo:start/pre_gen/progress {"translate": "bingo.game.start.pre_gen_progress"}
-	bossbar set bingo:start/pre_gen/progress color red
-	execute unless score $game_state bingo.state matches 1 run bossbar set bingo:start/pre_gen/progress visible false
+#	bossbar add bingo:start/pre_gen/progress {"translate": "bingo.game.start.pre_gen_progress"}
+#	bossbar set bingo:start/pre_gen/progress color red
+#	execute unless score $game_state bingo.state matches 1 run bossbar set bingo:start/pre_gen/progress visible false
 
 # Set gamerules
-	gamerule commandBlockOutput false
-	gamerule doWeatherCycle false
-	gamerule doInsomnia false
-	gamerule doTraderSpawning false
-	gamerule disableElytraMovementCheck true
-	gamerule doPatrolSpawning false
-	difficulty easy
+#	gamerule commandBlockOutput false
+#	gamerule doWeatherCycle false
+#	gamerule doInsomnia false
+#	gamerule doTraderSpawning false
+#	gamerule disableElytraMovementCheck true
+#	gamerule doPatrolSpawning false
+#	difficulty easy
 
 # Init slow loops
 	schedule function bingo:tick/clean_up 1s replace
@@ -1159,64 +1159,64 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 	#data modify storage bingo:player configurations append value {name: '{"translate": "bingo.lobby.settings.player.configuration.underwater"}', inventory: [{Slot: 100b, id: "minecraft:leather_boots", Count: 1b, tag: {Unbreakable: true, Enchantments:[{lvl: 3s, id: "minecraft:depth_strider"}]}}], effects: [{Id:13b, Amplifier: 0b, Duration: 2147483647, Ambient: 0b, ShowParticles: 0b, ShowIcon:0b}, {Id:16b, Amplifier: 0b, Duration: 2147483647, Ambient: 0b, ShowParticles: 0b, ShowIcon:0b}]}
 
 # setup teams
-	## add
-		team add bingo.aqua
-		team add bingo.black
-		team add bingo.blue
-		team add bingo.dark_aqua
-		team add bingo.dark_blue
-		team add bingo.dark_gray
-		team add bingo.dark_green
-		team add bingo.dark_purpl
-		team add bingo.dark_red
-		team add bingo.gold
-		team add bingo.gray
-		team add bingo.green
-		team add bingo.light_purp
-		team add bingo.red
-		team add bingo.white
-		team add bingo.yellow
+#	## add
+	#	team add bingo.aqua
+	#	team add bingo.black
+	#	team add bingo.blue
+	#	team add bingo.dark_aqua
+	#	team add bingo.dark_blue
+	#	team add bingo.dark_gray
+	#	team add bingo.dark_green
+	#	team add bingo.dark_purpl
+	#	team add bingo.dark_red
+	#	team add bingo.gold
+	#	team add bingo.gray
+	#	team add bingo.green
+	#	team add bingo.light_purp
+	#	team add bingo.red
+	#	team add bingo.white
+	#	team add bingo.yellow
 
 	## set colors
-		team modify bingo.aqua color aqua
-		team modify bingo.black color black
-		team modify bingo.blue color blue
-		team modify bingo.dark_aqua color dark_aqua
-		team modify bingo.dark_blue color dark_blue
-		team modify bingo.dark_gray color dark_gray
-		team modify bingo.dark_green color dark_green
-		team modify bingo.dark_purpl color dark_purple
-		team modify bingo.dark_red color dark_red
-		team modify bingo.gold color gold
-		team modify bingo.gray color gray
-		team modify bingo.green color green
-		team modify bingo.light_purp color light_purple
-		team modify bingo.red color red
-		team modify bingo.white color white
-		team modify bingo.yellow color yellow
+	#	team modify bingo.aqua color aqua
+	#	team modify bingo.black color black
+	#	team modify bingo.blue color blue
+	#	team modify bingo.dark_aqua color dark_aqua
+	#	team modify bingo.dark_blue color dark_blue
+	#	team modify bingo.dark_gray color dark_gray
+	#	team modify bingo.dark_green color dark_green
+	#	team modify bingo.dark_purpl color dark_purple
+	#	team modify bingo.dark_red color dark_red
+	#	team modify bingo.gold color gold
+	#	team modify bingo.gray color gray
+	#	team modify bingo.green color green
+	#	team modify bingo.light_purp color light_purple
+	#	team modify bingo.red color red
+	#	team modify bingo.white color white
+	#	team modify bingo.yellow color yellow
 
 	## set completed backgrounds
-		data modify storage bingo:card completedBackgroundTemplates set value []
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf002"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf003"','"\\uf004"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf005"','"\\uf006"','"\\uf007"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf008"','"\\uf002"','"\\uf004"','"\\uf009"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf00a"','"\\uf00b"','"\\uf00c"','"\\uf00d"','"\\uf00e"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf00f"','"\\uf003"','"\\uf010"','"\\uf004"','"\\uf011"','"\\uf012"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf013"','"\\uf014"','"\\uf002"','"\\uf015"','"\\uf016"','"\\uf009"','"\\uf017"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf018"','"\\uf005"','"\\uf019"','"\\uf006"','"\\uf004"','"\\uf007"','"\\uf01a"','"\\uf01b"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf01c"','"\\uf01d"','"\\uf01e"','"\\uf01f"','"\\uf020"','"\\uf021"','"\\uf022"','"\\uf023"','"\\uf024"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf025"','"\\uf008"','"\\uf003"','"\\uf002"','"\\uf026"','"\\uf004"','"\\uf027"','"\\uf009"','"\\uf012"','"\\uf028"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf029"','"\\uf02a"','"\\uf02b"','"\\uf02c"','"\\uf02d"','"\\uf02e"','"\\uf02f"','"\\uf030"','"\\uf031"','"\\uf032"','"\\uf033"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf034"','"\\uf00a"','"\\uf035"','"\\uf00b"','"\\uf036"','"\\uf00c"','"\\uf004"','"\\uf00d"','"\\uf037"','"\\uf00e"','"\\uf038"','"\\uf039"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf03a"','"\\uf03b"','"\\uf005"','"\\uf03c"','"\\uf002"','"\\uf006"','"\\uf03d"','"\\uf03e"','"\\uf007"','"\\uf009"','"\\uf03f"','"\\uf01b"','"\\uf040"']
-		data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf041"','"\\uf00f"','"\\uf042"','"\\uf003"','"\\uf043"','"\\uf010"','"\\uf044"','"\\uf004"','"\\uf045"','"\\uf011"','"\\uf046"','"\\uf012"','"\\uf047"','"\\uf048"']
+	#	data modify storage bingo:card completedBackgroundTemplates set value []
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf002"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf003"','"\\uf004"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf005"','"\\uf006"','"\\uf007"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf008"','"\\uf002"','"\\uf004"','"\\uf009"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf00a"','"\\uf00b"','"\\uf00c"','"\\uf00d"','"\\uf00e"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf00f"','"\\uf003"','"\\uf010"','"\\uf004"','"\\uf011"','"\\uf012"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf013"','"\\uf014"','"\\uf002"','"\\uf015"','"\\uf016"','"\\uf009"','"\\uf017"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf018"','"\\uf005"','"\\uf019"','"\\uf006"','"\\uf004"','"\\uf007"','"\\uf01a"','"\\uf01b"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf01c"','"\\uf01d"','"\\uf01e"','"\\uf01f"','"\\uf020"','"\\uf021"','"\\uf022"','"\\uf023"','"\\uf024"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf025"','"\\uf008"','"\\uf003"','"\\uf002"','"\\uf026"','"\\uf004"','"\\uf027"','"\\uf009"','"\\uf012"','"\\uf028"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf029"','"\\uf02a"','"\\uf02b"','"\\uf02c"','"\\uf02d"','"\\uf02e"','"\\uf02f"','"\\uf030"','"\\uf031"','"\\uf032"','"\\uf033"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf034"','"\\uf00a"','"\\uf035"','"\\uf00b"','"\\uf036"','"\\uf00c"','"\\uf004"','"\\uf00d"','"\\uf037"','"\\uf00e"','"\\uf038"','"\\uf039"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf03a"','"\\uf03b"','"\\uf005"','"\\uf03c"','"\\uf002"','"\\uf006"','"\\uf03d"','"\\uf03e"','"\\uf007"','"\\uf009"','"\\uf03f"','"\\uf01b"','"\\uf040"']
+	#	data modify storage bingo:card completedBackgroundTemplates append value ['"\\uf000"','"\\uf001"','"\\uf041"','"\\uf00f"','"\\uf042"','"\\uf003"','"\\uf043"','"\\uf010"','"\\uf044"','"\\uf004"','"\\uf045"','"\\uf011"','"\\uf046"','"\\uf012"','"\\uf047"','"\\uf048"']
 #region run registries
-	data remove storage bingo:registries categories
-	data remove storage bingo:registries items
-	data remove storage bingo:registries structures
+#	data remove storage bingo:registries categories
+#	data remove storage bingo:registries items
+#	data remove storage bingo:registries structures
 	data remove storage bingo:registries hud_components
 	data remove storage bingo:registries preferences
 	function #bingo:fill_registries
@@ -1246,9 +1246,9 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 #region initialize items
 	#>
 	# @within function bingo:init/**
-	#declare storage tmp.bingo:init
+#	#declare storage tmp.bingo:init
 
-	schedule function bingo:init/items/exec 1t
+#	schedule function bingo:init/items/exec 1t
 #endregion
 #region initialize hud components
 	#>
@@ -1293,5 +1293,5 @@ summon minecraft:area_effect_cloud 0 0 0 {CustomName:'{"translate": "bingo.techn
 #endregion
 
 # spawn strcutures
-	execute if score $lobby_generated bingo.state matches 0 in bingo:lobby run function bingo:init/setup_lobby
-	scoreboard players set $lobby_generated bingo.state 1
+#	execute if score $lobby_generated bingo.state matches 0 in bingo:lobby run function bingo:init/setup_lobby
+#	scoreboard players set $lobby_generated bingo.state 1

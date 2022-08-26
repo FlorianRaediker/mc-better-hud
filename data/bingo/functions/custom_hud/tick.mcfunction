@@ -12,7 +12,7 @@
 # 	function bingo:tick/tick
 #declare storage tmp.bingo:custom_hud
 
-function bingo:util/find_player_team
+#function bingo:util/find_player_team
 
 data remove storage bingo:custom_hud currentPlayer
 data modify storage tmp.bingo:custom_hud skipped set value []
@@ -21,7 +21,7 @@ data modify storage bingo:custom_hud players append from storage tmp.bingo:custo
 
 function #bingo:tick_hud_components
 
-execute if score $seed bingo.state matches -2147483648.. run function bingo:custom_hud/display_card
+#execute if score $seed bingo.state matches -2147483648.. run function bingo:custom_hud/display_card
 
 scoreboard players add @s bingo.hud_update 1
 

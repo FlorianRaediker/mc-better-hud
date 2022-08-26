@@ -22,16 +22,16 @@
 # Used to tag a player if the enable gamemode switch tag was added this tick
 #
 # @private
-#declare tag bingo.pref.added
+##declare tag bingo.pref.added
 
-tag @s[scores={bingo.pref=2}, tag=!bingo.enable_manual_gamemode_switch] add bingo.pref.added
-tag @s[scores={bingo.pref=2}, tag=!bingo.enable_manual_gamemode_switch] add bingo.enable_manual_gamemode_switch
-tag @s[scores={bingo.pref=2}, tag=bingo.enable_manual_gamemode_switch, tag=!bingo.pref.added] remove bingo.enable_manual_gamemode_switch
-tag @s remove bingo.pref.added
+#tag @s[scores={bingo.pref=2}, tag=!bingo.enable_manual_gamemode_switch] add bingo.pref.added
+#tag @s[scores={bingo.pref=2}, tag=!bingo.enable_manual_gamemode_switch] add bingo.enable_manual_gamemode_switch
+#tag @s[scores={bingo.pref=2}, tag=bingo.enable_manual_gamemode_switch, tag=!bingo.pref.added] remove bingo.enable_manual_gamemode_switch
+#tag @s remove bingo.pref.added
 
-execute if score @s bingo.pref matches 1..2 run data modify storage io.bingo:preferences menuOptions set from storage bingo:registries preferences.main
-execute if score @s bingo.pref matches 1..2 run function #bingo:preferences/main
-execute if score @s bingo.pref matches 1..2 run tellraw @s ["\n\n\n\n\n=== ", {"translate": "bingo.preferences.title", "bold": true, "color": "green"}, " ===\n\n", {"translate": "bingo.preferences.description", "color": "gray"}, "\n"]
+#execute if score @s bingo.pref matches 1..2 run data modify storage io.bingo:preferences menuOptions set from storage bingo:registries preferences.main
+#execute if score @s bingo.pref matches 1..2 run function #bingo:preferences/main
+#execute if score @s bingo.pref matches 1..2 run tellraw @s ["\n\n\n\n\n=== ", {"translate": "bingo.preferences.title", "bold": true, "color": "green"}, " ===\n\n", {"translate": "bingo.preferences.description", "color": "gray"}, "\n"]
 
 execute if score @s bingo.pref matches 5..78 run function bingo:preferences/custom_hud/show
 

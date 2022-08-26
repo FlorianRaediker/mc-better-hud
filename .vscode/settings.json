@@ -146,5 +146,8 @@
 	"datapack.lint.strictTeamCheck": ["error", true],
 	"datapack.lint.stringQuote": ["warning", false],
 	"datapack.lint.stringQuoteType": ["warning", "prefer double"],
-	"datapack.lint.timeOmitTickUnit": true
+	"datapack.lint.timeOmitTickUnit": true,
+	"cSpell.words": [
+		"minecraft"
+	]
 }
