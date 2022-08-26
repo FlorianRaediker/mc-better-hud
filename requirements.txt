@@ -1,2 +1,0 @@
-Python-NBT==1.2.0
-pyjson5==1.6.1

@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 10,
-		"description": "Better HUD with Timer and Coordinates, taken from NeunEinser's Fetchr"
+		"pack_format": 6,
+		"description": "Better HUD with Timer and Coordinates, extracted from NeunEinser's Fetchr"
 	}
 }
