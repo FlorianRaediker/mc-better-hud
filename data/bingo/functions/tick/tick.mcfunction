@@ -8,7 +8,7 @@
 # @within tag/function minecraft:tick
 # @handles #minecraft:tick
 
-execute in bingo:lobby run function neun_einser.timer:store_current_time
+function neun_einser.timer:store_current_time
 
 #region Resource pack check
 # Detect second (or more) players in a LAN world
