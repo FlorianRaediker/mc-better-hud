@@ -21,7 +21,7 @@
 		[
 			{
 				"label": "bingo.snake_case",
-				"parts": [ "/^bingo$/", "snake_case" ],
+				"parts": [ "snake_case", "snake_case" ],
 				"sep": "."
 			},
 			{

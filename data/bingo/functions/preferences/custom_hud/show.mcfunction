@@ -60,5 +60,5 @@ data modify storage bingo:custom_hud players append from storage tmp.bingo:prefe
 execute if score @s bingo.pref matches 67..69 run scoreboard players set $preferences.next_page bingo.tmp 11
 execute if score @s bingo.pref matches 67..69 run scoreboard players set @s bingo.update_hud 1
 
-execute if score @s bingo.pref matches 5 run tellraw @s ["\n[", {"translate": "bingo.preferences.back", "color": "#00c3ff", "clickEvent": {"action": "run_command", "value": "/trigger bingo.pref"}}, "]"]
-execute if score @s bingo.pref matches 11 run tellraw @s ["\n[", {"translate": "bingo.preferences.back", "color": "#00c3ff", "clickEvent": {"action": "run_command", "value": "/trigger bingo.pref set 5"}}, "]"]
+#execute if score @s bingo.pref matches 5 run tellraw @s ["\n[", {"translate": "bingo.preferences.back", "color": "#00c3ff", "clickEvent": {"action": "run_command", "value": "/trigger bingo.pref"}}, "]"]
+#execute if score @s bingo.pref matches 11 run tellraw @s ["\n[", {"translate": "bingo.preferences.back", "color": "#00c3ff", "clickEvent": {"action": "run_command", "value": "/trigger bingo.pref set 5"}}, "]"]

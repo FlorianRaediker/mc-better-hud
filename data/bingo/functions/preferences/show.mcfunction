@@ -36,7 +36,7 @@
 execute if score @s bingo.pref matches 5..78 run function bingo:preferences/custom_hud/show
 
 execute if score @s bingo.pref matches 1..5 run function bingo:preferences/print_menu_items
-execute if score @s bingo.pref matches 11 run function bingo:preferences/print_menu_items
+#execute if score @s bingo.pref matches 11 run function bingo:preferences/print_menu_items
 scoreboard players reset @s bingo.pref
 
 #>
