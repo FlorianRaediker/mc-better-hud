@@ -1129,7 +1129,7 @@ forceload add 0 0
 #endregion
 
 # Create overworld resourcepack check
-	fill 0 0 0 2 3 2 minecraft:black_concrete outline
+#	fill 0 0 0 2 3 2 minecraft:black_concrete outline
 #	gamerule spawnRadius 0
 
 # Add pregen bossbar

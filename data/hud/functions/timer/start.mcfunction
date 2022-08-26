@@ -1,1 +1,1 @@
-execute in bingo:lobby run execute in bingo:lobby run function neun_einser.timer:start/millis
+function neun_einser.timer:start/millis

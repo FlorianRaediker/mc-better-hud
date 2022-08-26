@@ -1,1 +1,1 @@
-execute in bingo:lobby run function neun_einser.timer:pause
+function neun_einser.timer:pause
