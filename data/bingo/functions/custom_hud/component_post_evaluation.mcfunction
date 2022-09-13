@@ -34,7 +34,6 @@ execute if score $custom_hud/width.padding bingo.io matches 2 run data modify st
 execute if score $custom_hud/width.padding bingo.io matches 1 run data modify storage io.bingo:custom_hud component.padding append value ""
 
 execute in minecraft:overworld run setblock 0 -64 0 minecraft:oak_sign{Text1: '{"storage":"io.bingo:custom_hud","nbt":"component.textComponent","interpret":true,"color":"black"}'}
-execute in minecraft:overworld run data modify storage io.bingo:custom_hud component.evaluatedShadow set from block 0 -64 0 Text1
 execute in minecraft:overworld run data modify block 0 -64 0 Text1 set from storage io.bingo:custom_hud component.textComponent
 execute in minecraft:overworld run data modify storage io.bingo:custom_hud component.evaluatedTextComponent set from block 0 -64 0 Text1
 execute in minecraft:overworld run setblock 0 -64 0 minecraft:bedrock

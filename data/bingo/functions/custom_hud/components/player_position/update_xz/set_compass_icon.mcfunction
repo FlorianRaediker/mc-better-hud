@@ -5,7 +5,6 @@
 # @within function bingo:custom_hud/components/player_position/update_xz
 # @context entity Player whose hud is currently being updated
 
-data modify storage io.bingo:custom_hud component.iconWidth set value '{"translate": "space.10"}'
 scoreboard players operation $custom_hud/player_pos.rot bingo.tmp /= 3 bingo.const
 
 execute if score $custom_hud/player_pos.rot bingo.tmp matches 0 run data modify storage io.bingo:custom_hud component.icon set value '"\\u0100"'
