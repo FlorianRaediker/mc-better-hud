@@ -75,8 +75,6 @@ execute if score $custom_hud/timer.daytime bingo.tmp matches 22696..23040 run da
 execute if score $custom_hud/timer.daytime bingo.tmp matches 23041..23390 run data modify storage io.bingo:custom_hud component.icon set value '"\\u0130"'
 execute if score $custom_hud/timer.daytime bingo.tmp matches 23391..23745 run data modify storage io.bingo:custom_hud component.icon set value '"\\u0131"'
 
-#execute if score $game_state bingo.state matches 0..1 run data modify storage io.bingo:custom_hud component.icon set value '"\\u0100"'
-
 # padding
 scoreboard players set $custom_hud/width.padding bingo.io 33
 execute if score $hours 91.timer.time matches ..99 run scoreboard players add $custom_hud/width.padding bingo.io 6
@@ -85,10 +83,6 @@ execute if score $hours 91.timer.time matches 0 run scoreboard players add $cust
 execute if score $hours 91.timer.time matches 0 if score $minutes 91.timer.time matches ..9 run scoreboard players add $custom_hud/width.padding bingo.io 6
 execute if score $hours 91.timer.time matches 0 if score $minutes 91.timer.time matches 0 run scoreboard players add $custom_hud/width.padding bingo.io 8
 execute if score $hours 91.timer.time matches 0 if score $minutes 91.timer.time matches 0 if score $seconds 91.timer.time matches ..9 run scoreboard players add $custom_hud/width.padding bingo.io 6
-
-# hide timer during pre-gen
-#execute if score $game_state bingo.state matches 0..2 run data modify storage io.bingo:custom_hud component.textComponent set value '"0"'
-#execute if score $game_state bingo.state matches 0..2 run scoreboard players set $custom_hud/width.padding bingo.io 73
 
 function bingo:custom_hud/component_post_evaluation
 data modify storage bingo:custom_hud currentPlayer.components[{id: "bingo:timer"}] merge from storage io.bingo:custom_hud component

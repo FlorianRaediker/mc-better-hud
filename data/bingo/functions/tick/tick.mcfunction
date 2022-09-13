@@ -52,15 +52,7 @@ tellraw @a[scores={bingo.resources=1}] ["\n\n\n\n\n", {"translate": "%1074992263
 scoreboard players enable @a[tag=bingo.resourcepack_check] bingo.resources
 scoreboard players set @a[scores={bingo.resources=1}] bingo.resources 0
 tag @a[scores={bingo.resources=91}] remove bingo.resourcepack_check
-#execute as @a[scores={bingo.resources=91}] run function bingo:util/go_to_lobby
 
-# Place the sign in resource pack check chamber
-setblock 1 2 1 minecraft:air
-#NEUN_SCRIPT #uncomment
-#setblock 1 2 1 minecraft:warped_wall_sign{Text1: '{"translate": "%1074992263$s%{NEUN_SCRIPT:rp_version}$s%1$s", "color": "#8eedeb", "with": [{"translate": "%1074992263$s%3$s%3$s%1$s", "bold":true, "with": ["", {"translate": "bingo.resourcepack_check.wrong_version.sign.line1"}]}, {"translate": "bingo.resourcepack_check.sign.line1"}], "clickEvent": {"action": "run_command", "value": "/trigger bingo.resources"}}',Text2: '{"translate": "%1074992263$s%{NEUN_SCRIPT:rp_version}$s%1$s", "color": "#8eedeb", "with": [{"translate": "%1074992263$s%3$s%3$s%1$s", "bold":true, "with": ["Download", {"translate": "bingo.resourcepack_check.wrong_version.sign.line2"}]}, {"translate": "bingo.resourcepack_check.sign.line2"}]}',Text3: '{"translate": "%1074992263$s%{NEUN_SCRIPT:rp_version}$s%1$s", "color": "#8eedeb", "with": [{"translate": "%1074992263$s%3$s%3$s%1$s", "bold":true, "with": ["Resourcepack", {"translate": "bingo.resourcepack_check.wrong_version.sign.line3"}]}, {"translate": "bingo.resourcepack_check.sign.line3"}]}',Text4: '{"translate": "%1074992263$s%{NEUN_SCRIPT:rp_version}$s%1$s", "color": "#8eedeb", "with": [{"translate": "%1074992263$s%3$s%3$s%1$s", "bold":true, "with": ["", {"translate": "bingo.resourcepack_check.wrong_version.sign.line4"}]}, {"translate": "bingo.resourcepack_check.sign.line4"}]}'}
-
-#NEUN_SCRIPT remove
-#setblock 1 2 1 minecraft:warped_wall_sign{Text1: '{"translate": "%1074992263$s%1$s", "color": "#8eedeb", "with": [{"translate": "%1074992263$s%3$s%3$s%1$s", "bold":true, "with": ["", {"translate": "bingo.resourcepack_check.wrong_version.sign.line1"}]}, {"translate": "bingo.resourcepack_check.sign.line1"}], "clickEvent": {"action": "run_command", "value": "/trigger bingo.resources"}}',Text2: '{"translate": "%1074992263$s%1$s", "color": "#8eedeb", "with": [{"translate": "%1074992263$s%3$s%3$s%1$s", "bold":true, "with": ["Download", {"translate": "bingo.resourcepack_check.wrong_version.sign.line2"}]}, {"translate": "bingo.resourcepack_check.sign.line2"}]}',Text3: '{"translate": "%1074992263$s%1$s", "color": "#8eedeb", "with": [{"translate": "%1074992263$s%3$s%3$s%1$s", "bold":true, "with": ["Resourcepack", {"translate": "bingo.resourcepack_check.wrong_version.sign.line3"}]}, {"translate": "bingo.resourcepack_check.sign.line3"}]}',Text4: '{"translate": "%1074992263$s%1$s", "color": "#8eedeb", "with": [{"translate": "%1074992263$s%3$s%3$s%1$s", "bold":true, "with": ["", {"translate": "bingo.resourcepack_check.wrong_version.sign.line4"}]}, {"translate": "bingo.resourcepack_check.sign.line4"}]}'}
 #endregion
 
 # Assign each player a unique ID
@@ -69,25 +61,10 @@ execute as @a unless score @s bingo.id matches -2147483648.. run function #bingo
 
 # custom hud
 data modify storage tmp.bingo:custom_hud handled set value []
-#execute as @a[predicate=!bingo:is_in_overworld] run function bingo:custom_hud/tick
 execute as @a run function bingo:custom_hud/tick
 data modify storage bingo:custom_hud players append from storage tmp.bingo:custom_hud handled[]
-#scoreboard players reset $update_card bingo.state
 
 # Loop depending on game state
-#execute if entity @a[predicate=bingo:is_in_lobby, limit=1] in bingo:lobby run function bingo:lobby/tick
 function bingo:lobby/tick
-#execute if score $game_state bingo.state matches 2.. run function bingo:game/tick
 
 scoreboard players operation $last_tick bingo.state = $raw 91.timer.time
-
-# Command blocks enabled check
-#execute if score $commandblocks_enabled bingo.state matches 0 run effect give @a minecraft:blindness 2 255 true
-#execute if score $commandblocks_enabled bingo.state matches 0 run effect give @a minecraft:slowness 2 255 true
-#execute if score $commandblocks_enabled bingo.state matches 0 run effect give @a minecraft:jump_boost 2 128 true
-
-#NEUN_SCRIPT #uncomment
-#execute if score $commandblocks_enabled bingo.state matches 0 run tellraw @a {"translate":"%1074992263$s%1$s", "color": "red", "with":[["Command blocks are disabled on this server. Please make sure the server.properties file does have all mentioned values set as described ", {"text": "here", "color": "#00c3ff", "clickEvent": {"action": "open_url", "value": "https://gist.githubusercontent.com/NeunEinser/dac27cc76dbc83bdd1ea22a99cff3967/raw/{NEUN_SCRIPT:version}.properties"}}, "."], {"translate": "bingo.error.command_blocks_disabled", "with": [{"translate": "bingo.error.command_blocks_disabled.link", "color": "#00c3ff", "clickEvent": {"action": "open_url", "value": "https://gist.githubusercontent.com/NeunEinser/dac27cc76dbc83bdd1ea22a99cff3967/raw/{NEUN_SCRIPT:version}.properties"}}]}]}
-
-#NEUN_SCRIPT remove
-#execute if score $commandblocks_enabled bingo.state matches 0 run tellraw @a {"translate":"%1074992263$s%1$s", "color": "red", "with":[["Command blocks are disabled on this server. Please make sure the server.properties file does have all mentioned values set as described ", {"text": "here", "color": "#00c3ff", "clickEvent": {"action": "open_url", "value": "https://gist.githubusercontent.com/NeunEinser/dac27cc76dbc83bdd1ea22a99cff3967"}}, "."], {"translate": "bingo.error.command_blocks_disabled", "with": [{"translate": "bingo.error.command_blocks_disabled.link", "color": "#00c3ff", "clickEvent": {"action": "open_url", "value": "https://gist.githubusercontent.com/NeunEinser/dac27cc76dbc83bdd1ea22a99cff3967"}}]}]}

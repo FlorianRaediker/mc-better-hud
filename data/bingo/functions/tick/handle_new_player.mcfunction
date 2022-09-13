@@ -5,19 +5,9 @@
 # @within tag/function bingo:new_player
 # @handles #bingo:new_player
 
-#team join bingo.dark_green
-#recipe give @s *
-#scoreboard players set @s bingo.card_pos 0
-
-#gamemode adventure
 scoreboard players set @s bingo.resources 1
 scoreboard players enable @s bingo.resources
-#effect give @s minecraft:weakness 1000000 255 true
 tag @s add bingo.resourcepack_check
-
-#setblock 1 2 2 minecraft:sea_lantern
-
-#scoreboard players add @s bingo.operator 0
 
 # Set player ID
 #>

@@ -1,7 +1,6 @@
 {
 	"values": [
 		"neun_einser.timer:internal/init",
-		"bingo:init/init",
-		"hud:internal/init"
+		"bingo:init/init"
 	]
 }
