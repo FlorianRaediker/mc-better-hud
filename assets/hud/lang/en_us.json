@@ -1,0 +1,5 @@
+{
+	"hud.enable_success.text": "Custom HUD was successfully enabled",
+	"hud.enable_success.click": "Click here",
+	"hud.enable_success.change_prefs": "%s to customize"
+}
