@@ -1,0 +1,43 @@
+{
+  "name": "better-hud",
+  "version": "1.0.0-mc1.19.2",
+  "target": "dist/",
+  "packs": [
+    {
+      "name": "better-hud-{version}-resourcepack.zip",
+      "include": [
+        "LICENSE",
+        "pack.resourcepack.mcmeta:pack.mcmeta",
+        "assets/**"
+      ],
+      "exclude": [
+        "**/*.py",
+        "**/*.xcf",
+        "**/*.jsonc",
+        "assets/bingo/textures/font/compass_text_scroll.png",
+        "assets/bingo/textures/font/compass_text_overlay.png"
+      ],
+      "dependencies": [
+        {
+          "url": "https://github.com/AmberWat/NegativeSpaceFont/releases/download/v4.1/NegativeSpaceFont4.zip",
+          "exclude": [
+            "pack.mcmeta",
+            "pack.png",
+            "README.md"
+          ],
+          "move": {
+            "LICENSE.txt": "assets/space/"
+          }
+        }
+      ]
+    },
+    {
+      "name": "better-hud-{version}-datapack.zip",
+      "include": [
+        "LICENSE",
+        "pack.mcmeta",
+        "data/**"
+      ]
+    }
+  ]
+}
