@@ -7,8 +7,8 @@
 # @private
 #declare score_holder $prevent_breakage.start
 
-execute if score $raw 91.timer.time matches 60000000 run function neun_einser.timer:internal/prevent_worldborder_reset
-execute if score $raw 91.timer.time matches ..59999999 run scoreboard players operation $start 91.timer.intern -= $raw 91.timer.time
+execute if score $raw 91.timer.time matches 59999000 run function neun_einser.timer:internal/prevent_worldborder_reset
+execute if score $raw 91.timer.time matches ..59998999 run scoreboard players operation $start 91.timer.intern -= $raw 91.timer.time
 
 scoreboard players operation $prevent_breakage.start 91.timer.tmp = $start 91.timer.intern
 
