@@ -60,7 +60,10 @@ forceload add 0 0
 	#
 	# @internal
 	#declare tag bingo.emerald
-
+	#>
+	# This tag is given to players whose position changed compared to last tick
+	# @internal
+	#declare tag bingo.position_changed
 	#>
 	# This tag is given to players who are currently verifying their resource pack
 	#
@@ -168,7 +171,7 @@ forceload add 0 0
 		# is used to determine whether the player position display needs updating
 		# @within
 		#		function bingo:init/init
-		#		function bingo:custom_hud/components/player_position/*
+		#		function bingo:tick/player_tick
 		scoreboard objectives add bingo.pos_hash dummy
 
 		#>
@@ -186,11 +189,11 @@ forceload add 0 0
 		#
 		# @within
 		#		function bingo:init/init
-		#		function bingo:tick/tick
+		#		function bingo:tick/player_tick
 		#		function bingo:tick/handle_player_join
 		scoreboard objectives add bingo.reconnect minecraft.custom:minecraft.leave_game
 
-	#endregion
+	#endregion		
 
 	#region score holders
 		#>
@@ -235,10 +238,6 @@ forceload add 0 0
 		scoreboard players set 6 bingo.const 6
 		#>
 		# @public
-		#declare score_holder 8
-		scoreboard players set 8 bingo.const 8
-		#>
-		# @public
 		#declare score_holder 9
 		scoreboard players set 9 bingo.const 9
 		#>
@@ -255,12 +254,12 @@ forceload add 0 0
 		scoreboard players set 32 bingo.const 32
 		#>
 		# @public
-		#declare score_holder 40
-		scoreboard players set 40 bingo.const 40
-		#>
-		# @public
 		#declare score_holder 41
 		scoreboard players set 41 bingo.const 41
+		#>
+		# @public
+		#declare score_holder 50
+		scoreboard players set 50 bingo.const 50
 		#>
 		# @public
 		#declare score_holder 96
